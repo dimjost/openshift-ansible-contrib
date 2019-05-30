@@ -29,7 +29,7 @@ regular user account with sudo access):
 ```
 $ sudo yum install -y git ansible
 $ mkdir -p ~/git
-$ cd ~/git/ && git clone https://github.com/openshift/openshift-ansible-contrib
+$ cd ~/git/ && git clone https://github.com/dimjost/openshift-ansible-contrib
 $ cd ~/git/openshift-ansible-contrib && ansible-playbook playbooks/deploy-host.yaml -e provider=rhv
 ```
 

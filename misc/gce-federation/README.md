@@ -14,7 +14,7 @@ $ sudo yum -y install ansible git python-libcloud git openssl python2-jmespath
 Clone the repository:
 
 ```
-$ git clone https://github.com/openshift/openshift-ansible-contrib.git
+$ git clone https://github.com/dimjost/openshift-ansible-contrib.git
 $ cd openshift-ansible-contrib/misc/gce-federation
 ```
 

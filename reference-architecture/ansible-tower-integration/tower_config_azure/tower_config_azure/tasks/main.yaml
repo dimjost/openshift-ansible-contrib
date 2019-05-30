@@ -110,7 +110,7 @@
     name: "openshift-ansible-contrib"
     description: "sync openshift-ansible-contrib"
     organization: "Default"
-    scm_url: https://github.com/openshift/openshift-ansible-contrib.git
+    scm_url: https://github.com/dimjost/openshift-ansible-contrib.git
     scm_type: git
     scm_branch: master
     scm_update_on_launch: true

@@ -16,4 +16,4 @@ In Windows, use PuTTYgen to generate your public and private keys.
 5. You will need the private and public keys for the Open Shift Install.
 
 
-[PuTTYgen]:  https://github.com/openshift/openshift-ansible-contrib/raw/master/reference-architecture/azure-ansible/images/puttygen.png
+[PuTTYgen]:  https://github.com/dimjost/openshift-ansible-contrib/raw/master/reference-architecture/azure-ansible/images/puttygen.png

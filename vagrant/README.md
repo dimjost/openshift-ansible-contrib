@@ -42,7 +42,7 @@ The OS for the origin install defaults to centos but can be overridden by the fo
 Installation
 ------------
 
-    git clone https://github.com/openshift/openshift-ansible-contrib.git
+    git clone https://github.com/dimjost/openshift-ansible-contrib.git
     cd openshift-ansible-contrib/vagrant
 
 then for an Origin install

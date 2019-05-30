@@ -36,4 +36,4 @@ The keys randomart image is:
 Your public and private keys are now available in your home folder under the .ssh directory.
 
 
-[terminal]:  https://github.com/openshift/openshift-ansible-contrib/raw/master/reference-architecture/azure-ansible/images/terminal.png
+[terminal]:  https://github.com/dimjost/openshift-ansible-contrib/raw/master/reference-architecture/azure-ansible/images/terminal.png

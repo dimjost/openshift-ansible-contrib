@@ -1,6 +1,6 @@
 
 # DEPRECATED
-This code has been deprecated please check the directory https://github.com/openshift/openshift-ansible-contrib/tree/master/reference-architecture/3.9/playbooks and the new reference architecture document 
+This code has been deprecated please check the directory https://github.com/dimjost/openshift-ansible-contrib/tree/master/reference-architecture/3.9/playbooks and the new reference architecture document 
 https://access.redhat.com/documentation/en-us/reference_architectures/2018/html/deploying_and_managing_openshift_3.9_on_amazon_web_services/
 
 # The Reference Architecture OpenShift on Amazon Web Services
@@ -48,7 +48,7 @@ $ yum -y install python-pip git python2-boto \
                  httpd-tools java-1.8.0-openjdk-headless
 $ pip install git+https://github.com/ansible/ansible.git@stable-2.3
 $ mkdir -p /usr/share/ansible/openshift-ansible
-$ git clone https://github.com/openshift/openshift-ansible.git /usr/share/ansible/openshift-ansible
+$ git clone https://github.com/dimjost/openshift-ansible.git /usr/share/ansible/openshift-ansible
 ```
 
 ## Usage

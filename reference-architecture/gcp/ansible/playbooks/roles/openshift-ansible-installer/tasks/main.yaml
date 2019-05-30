@@ -35,7 +35,7 @@
 
 - name: download openshift ansible installer from github
   git:
-    repo: https://github.com/openshift/openshift-ansible.git
+    repo: https://github.com/dimjost/openshift-ansible.git
     dest: '{{ playbook_dir }}/../../../../../openshift-ansible'
     version: '{{ openshift_ansible_branch }}'
   when: aoi_available is not defined or aoi_available | failed or aoi_available | skipped

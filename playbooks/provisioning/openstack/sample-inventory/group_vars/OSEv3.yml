@@ -28,7 +28,7 @@ openshift_hosted_registry_wait: True
 #openshift_hosted_registry_storage_openstack_filesystem: xfs
 
 ## NOTE(shadower): This won't work until the openshift-ansible issue #5657 is fixed:
-## https://github.com/openshift/openshift-ansible/issues/5657
+## https://github.com/dimjost/openshift-ansible/issues/5657
 ## If you're using the `cinder_hosted_registry_name` option from
 ## `all.yml`, uncomment these lines:
 #openshift_hosted_registry_storage_openstack_volumeID: "{{ lookup('os_cinder', cinder_hosted_registry_name).id }}"

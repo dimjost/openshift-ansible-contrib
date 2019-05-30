@@ -21,7 +21,7 @@ You can use the `deploy-host.yaml` playbook provided within the repository to in
 sudo subscription-manager repos --enable rhel-7-server-rpms --enable rhel-7-server-extras-rpms --enable rhel-7-server-ose-3.6-rpms
 sudo yum update
 sudo yum install git ansible
-git clone https://github.com/openshift/openshift-ansible-contrib
+git clone https://github.com/dimjost/openshift-ansible-contrib
 cd openshift-ansible-contrib
 ansible-playbook playbooks/deploy-host.yaml -e provider=gcp
 ```
@@ -38,7 +38,7 @@ sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noa
 sudo yum install curl python which tar qemu-img openssl git ansible java-1.8.0-openjdk-headless httpd-tools python2-passlib python-libcloud python2-jmespath atomic-openshift-utils
 ```
 
-Note: It's possible to deploy OCP without the `atomic-openshift-utils` package installed (`openshift-ansible` installer will be then downloaded directly from [GitHub](https://github.com/openshift/openshift-ansible)). This may be convenient when you don't want to consume your OpenShift subscription on your deployment host, or when you are running the deployment from CentOS or Fedora.
+Note: It's possible to deploy OCP without the `atomic-openshift-utils` package installed (`openshift-ansible` installer will be then downloaded directly from [GitHub](https://github.com/dimjost/openshift-ansible)). This may be convenient when you don't want to consume your OpenShift subscription on your deployment host, or when you are running the deployment from CentOS or Fedora.
 
 Note 2: You need to have GNU tar because the BSD version will not work. Also, it may be necessary to update qemu-img if the package is already installed. If the package is not updated, errors may occur when uploading the RHEL image to GCP.
 

@@ -13,7 +13,7 @@ warnuser(){
 ###########
 This script is distributed WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND
 Beware ImageStreams objects are not importables due to the way they work
-See https://github.com/openshift/openshift-ansible-contrib/issues/967
+See https://github.com/dimjost/openshift-ansible-contrib/issues/967
 for more information
 EOF
 }

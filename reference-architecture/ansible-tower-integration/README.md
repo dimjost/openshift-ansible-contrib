@@ -10,7 +10,7 @@ Finally, you might want to check out this [demonstration video](https://youtu.be
 
 The diagram below illustrates the desired end state of this guide - to have Ansible Tower workflows able to deploy OpenShift and other services on various cloud providers, including creating the necessary virtual infrastructure on each cloud provider. 
 
-![Overview Diagram](https://github.com/openshift/openshift-ansible-contrib/blob/master/reference-architecture/ansible-tower-integration/Overview_Diagram.png)
+![Overview Diagram](https://github.com/dimjost/openshift-ansible-contrib/blob/master/reference-architecture/ansible-tower-integration/Overview_Diagram.png)
 
 Here are the major stages to achieving the desired end state. 
 1. Deploying Ansible Tower on the desired cloud provider. 
@@ -60,7 +60,7 @@ The directories contained within this directory roughly include:
 
 ### Configuring Ansible Tower for deployments on Amazon Web Services
 
-This guide shows you how to use the master branch of [OpenShift-Ansible-Contrib](https://github.com/openshift/openshift-ansible-contrib). If you want to ensure that no changes are made to the deployment configuration, you may want to [fork the repository](https://help.github.com/articles/fork-a-repo/) to ensure nothing changes without your knowledge.
+This guide shows you how to use the master branch of [OpenShift-Ansible-Contrib](https://github.com/dimjost/openshift-ansible-contrib). If you want to ensure that no changes are made to the deployment configuration, you may want to [fork the repository](https://help.github.com/articles/fork-a-repo/) to ensure nothing changes without your knowledge.
 
 Once you have Ansible Tower running and licensed you can clone and run the tower_config_aws playbook with the appropriate variables. This will configure Ansible. Just make sure you have your tower_cli.cfg file setup and also make sure you have your AWS_KEY and AWS_SECRET as well as the ssh key you wish to use to authenticate to your machines. Then you can do the following:
 
@@ -73,12 +73,12 @@ password=yourpassword
 
 You will need to git clone the openshift-ansible installer to your tower instance. In the future it would be ideal to have this integrated into tower as a project instead of stand alone.
 ```
-git clone https://github.com/openshift/openshift-ansible.git /usr/share/ansible/openshift-ansible
+git clone https://github.com/dimjost/openshift-ansible.git /usr/share/ansible/openshift-ansible
 ```
 
 Now you can clone the openshift-ansible-contrib repository and run the tower_config_aws bootstrapping playbook. The table below explains the variables you should pass to it.
 ```
-$ git clone https://github.com/openshift/openshift-ansible-contrib.git
+$ git clone https://github.com/dimjost/openshift-ansible-contrib.git
 $ cd reference-architecture/ansible-tower-integration/tower_config_aws
 $ ansible-playbook tower_config_aws.yaml --extra-vars "AWS_MACHINE_SSH_KEY=<PATH/TO/PRIVKEY> AWS_KEY=<AWS_KEY> AWS_SECRET=<YOUR_AWS_SECRET> TOWER_HOSTNAME=tower.acme.com TOWER_USER=admin TOWER_PASSWORD=password"
 ```
@@ -92,7 +92,7 @@ $ ansible-playbook tower_config_aws.yaml --extra-vars "AWS_MACHINE_SSH_KEY=<PATH
 | TOWER_USER                 | yes                | Username (admin)                              |
 | TOWER_PASSWORD             | yes                | Password for TOWER_USER                       |
 
-This will configure tower with all the inventories, credentials, job_templates, and workflows to begin deploying across Amazon Web Services. After this is done you will need to log into Ansible Tower and edit the job named "workflow-ocp-aws-install". You will need to edit the extra_vars section of the job named workflow-ocp-aws-install and change the values wherever they are set to "CHANGEME" to the appropriate values for your environment. You can find the documentation for those values in the specific provider reference architectures. For example, here in the [AWS Reference Architecture](https://github.com/openshift/openshift-ansible-contrib/reference-architecture/aws-ansible)
+This will configure tower with all the inventories, credentials, job_templates, and workflows to begin deploying across Amazon Web Services. After this is done you will need to log into Ansible Tower and edit the job named "workflow-ocp-aws-install". You will need to edit the extra_vars section of the job named workflow-ocp-aws-install and change the values wherever they are set to "CHANGEME" to the appropriate values for your environment. You can find the documentation for those values in the specific provider reference architectures. For example, here in the [AWS Reference Architecture](https://github.com/dimjost/openshift-ansible-contrib/reference-architecture/aws-ansible)
 
 The workflow-ocp-aws-install can now be run. It will:
 
@@ -117,11 +117,11 @@ It also appears that workflows can be exported via a schema. There is a great do
 
 ### Configuring Ansible Tower for deployments on Microsoft Azure
 
-This guide shows you how to use the master branch of [OpenShift-Ansible-Contrib](https://github.com/openshift/openshift-ansible-contrib). If you want to ensure that no changes are made to the deployment configuration, you may want to [fork the repository](https://help.github.com/articles/fork-a-repo/) to ensure nothing changes without your knowledge.
+This guide shows you how to use the master branch of [OpenShift-Ansible-Contrib](https://github.com/dimjost/openshift-ansible-contrib). If you want to ensure that no changes are made to the deployment configuration, you may want to [fork the repository](https://help.github.com/articles/fork-a-repo/) to ensure nothing changes without your knowledge.
 
 Now you can clone the openshift-ansible-contrib repository and run the tower_config_azure bootstrapping playbook. The table below explains the variables you should pass to it.
 ```
-$ git clone https://github.com/openshift/openshift-ansible-contrib.git
+$ git clone https://github.com/dimjost/openshift-ansible-contrib.git
 $ cd reference-architecture/ansible-tower-integration/tower_config_azure
 $ ansible-playbook tower_config_azure.yaml  --extra-vars="AZURE_USERNAME=$AZURE_USERNAME AZURE_PASSWORD=$AZURE_PASSWORD AZURE_SP_NAME=$AZURE_SP_NAME AZURE_SP_PASSWORD=$AZURE_SP_PASSWORD AZURE_MACHINE_SSH_KEY=$AZURE_MACHINE_SSH_KEY AZURE_CLIENT=$AZURE_CLIENT AZURE_SUBSCRIPTION=$AZURE_SUBSCRIPTION AZURE_TENANT=$AZURE_TENANT"
 
@@ -137,7 +137,7 @@ $ ansible-playbook tower_config_azure.yaml  --extra-vars="AZURE_USERNAME=$AZURE_
 | AZURE_SUBSCRIPTION         | yes                |  Azure subscription (obtained from `azure account show`) |
 | AZURE_TENANT               | yes                |  Azure tenant (obtain from `azure account show`) |
 
-This will configure tower with all the inventories, credentials, job_templates, and workflows to begin deploying across Microsoft Azure. After this is done you will need to log into Ansible Tower and edit the job named "workflow-ocp-azure-install". You will need to edit the extra_vars section of the job named workflow-ocp-azure-install and change the values wherever they are set to "CHANGEME" to the appropriate values for your environment. You can find the documentation for those values in the specific provider reference architectures. For example, here in the [Azure Reference Architecture](https://github.com/openshift/openshift-ansible-contrib/reference-architecture/azure-ansible). With regards to the aadclientid value, you can find it by running the following command:
+This will configure tower with all the inventories, credentials, job_templates, and workflows to begin deploying across Microsoft Azure. After this is done you will need to log into Ansible Tower and edit the job named "workflow-ocp-azure-install". You will need to edit the extra_vars section of the job named workflow-ocp-azure-install and change the values wherever they are set to "CHANGEME" to the appropriate values for your environment. You can find the documentation for those values in the specific provider reference architectures. For example, here in the [Azure Reference Architecture](https://github.com/dimjost/openshift-ansible-contrib/reference-architecture/azure-ansible). With regards to the aadclientid value, you can find it by running the following command:
 
 ```
 $ azure ad sp show -c "james7openshiftcloudprovider"

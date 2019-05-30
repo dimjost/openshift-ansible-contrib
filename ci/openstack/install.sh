@@ -13,7 +13,7 @@ if [ "${CI_OVER_CAPACITY:-}" == "true" ]; then
     exit 1
 fi
 
-git clone https://github.com/openshift/openshift-ansible ../openshift-ansible
+git clone https://github.com/dimjost/openshift-ansible ../openshift-ansible
 cd ../openshift-ansible
 git checkout "${OPENSHIFT_ANSIBLE_COMMIT:-master}"
 git status

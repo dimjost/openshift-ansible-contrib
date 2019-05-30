@@ -30,7 +30,7 @@
 
   - name: Pull openshift-ansible from git
     git:
-      repo: https://github.com/openshift/openshift-ansible.git
+      repo: https://github.com/dimjost/openshift-ansible.git
       dest: /tmp/openshift-ansible
 
   - name: Create the remote inventory file

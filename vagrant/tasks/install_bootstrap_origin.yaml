@@ -3,7 +3,7 @@
     name: git
     state: present
 - git:
-    repo: https://github.com/openshift/openshift-ansible
+    repo: https://github.com/dimjost/openshift-ansible
     dest: ~/openshift-ansible
     force: yes
     update: yes

@@ -111,7 +111,7 @@ things up for a minimal installation.
 
 
 ```
-$ git clone https://github.com/openshift/openshift-ansible-contrib
+$ git clone https://github.com/dimjost/openshift-ansible-contrib
 $ cp -r openshift-ansible-contrib/playbooks/provisioning/openstack/sample-inventory/ inventory
 ```
 
@@ -207,7 +207,7 @@ We will use the `openshift-ansible` project to install openshift on
 top of the OpenStack nodes we have prepared:
 
 ```bash
-$ git clone https://github.com/openshift/openshift-ansible
+$ git clone https://github.com/dimjost/openshift-ansible
 $ ansible-playbook -i inventory openshift-ansible/playbooks/byo/config.yml
 ```
 
@@ -232,16 +232,16 @@ advanced configuration:
 
 
 [ansible]: https://www.ansible.com/
-[openshift-ansible]: https://github.com/openshift/openshift-ansible
+[openshift-ansible]: https://github.com/dimjost/openshift-ansible
 [devstack]: https://docs.openstack.org/devstack/
 [tripleo]: http://tripleo.org/
 [ansible-dependencies]: ./advanced-configuration.md#dependencies-for-localhost-ansible-controladmin-node
-[contrib]: https://github.com/openshift/openshift-ansible-contrib
+[contrib]: https://github.com/dimjost/openshift-ansible-contrib
 [control-host-image]: https://hub.docker.com/r/redhatcop/control-host-openstack/
 [hardware-requirements]: https://docs.openshift.org/latest/install_config/install/prerequisites.html#hardware
 [origin]: https://www.openshift.org/
 [centos7]: https://www.centos.org/
-[sample-openshift-inventory]: https://github.com/openshift/openshift-ansible/blob/master/inventory/byo/hosts.example
+[sample-openshift-inventory]: https://github.com/dimjost/openshift-ansible/blob/master/inventory/byo/hosts.example
 [advanced-configuration]: ./advanced-configuration.md
 [accessing-openshift]: ./advanced-configuration.md#accessing-the-openshift-cluster
 [uninstall-openshift]: ./advanced-configuration.md#removing-the-openshift-cluster

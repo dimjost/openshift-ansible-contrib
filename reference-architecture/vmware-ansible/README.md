@@ -23,7 +23,7 @@ The following commands should be issued from the deployment host:
 # yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 # yum install -y ansible git python2-pyvmomi
 $ cd ~/git/
-$ git clone -b vmw-3.9 https://github.com/openshift/openshift-ansible-contrib
+$ git clone -b vmw-3.9 https://github.com/dimjost/openshift-ansible-contrib
 $ cd openshift-ansible-contrib/reference-architecture/vmware-ansible/ 
 $ cp inventory/vsphere/vms/inventory39 /etc/ansible/hosts
 ```
@@ -91,7 +91,7 @@ https://access.redhat.com/solutions/3003411
 ```bash
 $ sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 $ sudo yum install -y python2-pyvmomi
-$ git clone -b vmw-3.9 https://github.com/openshift/openshift-ansible-contrib
+$ git clone -b vmw-3.9 https://github.com/dimjost/openshift-ansible-contrib
 $ cd openshift-ansible-contrib/reference-architecture/vmware-ansible/
 
 $ cat /etc/ansible/hosts
